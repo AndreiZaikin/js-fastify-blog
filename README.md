@@ -1,3 +1,5 @@
+![Push](https://github.com/AndreiZaikin/js-fastify-blog/actions/workflows/push.yml/badge.svg)
+
 # js-fastify-blog
 
 Учебный проект по упаковке приложения в Docker Compose.
@@ -24,5 +26,3 @@
 ## CI/CD
 
 Автоматический прогон тестов и публикация образа на Docker Hub при пуше в main.
-
-![Push](https://github.com/AndreiZaikin/js-fastify-blog/actions/workflows/push.yml/badge.svg)
