@@ -3,3 +3,4 @@ app/dist
 app/.cache
 app/.npm
 *.sqlite
+.env

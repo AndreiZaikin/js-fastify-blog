@@ -7,3 +7,14 @@ services:
       - "8080:8080"
     volumes:
       - ./app:/app
+    image: js-fastify-blog:dev # локальный тег, чтобы не использовать образ с Docker Hub
+  caddy:                # Прокси
+    image: caddy:latest # готовый образ Caddy
+    ports:
+      - "80:80"         # HTTP → редирект на HTTPS
+      - "443:443"       # HTTPS
+    volumes:
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile   # конфиг Caddy
+    depends_on:
+      - app              # ждать запуска приложения
+
